@@ -3,6 +3,7 @@ $color_main_m: #434343;
 $color_main_nav: #7f7f7f;
 $color_main_s: #e3e3e3;
 $color_sub: #0affda;
+$color_link: #700aff;
 
 
 /* reset css */
@@ -573,6 +574,42 @@ footer{
                 font-size: 16px;
                 font-weight: 300;
             }
+            a{
+                position: relative;
+                display: inline-block;
+                color: $color_link;
+                text-decoration: none;
+                padding: 12px 0;
+                top: 12px;
+                transition: .3s;
+                z-index: 0;
+                &::after{
+                    z-index: -1;
+                    content: "";
+                    width: 0px;
+                    height: 8px;
+                    position: absolute;
+                    left: 0;
+                    bottom: 16px;
+                    background-color: $color_sub;
+                    transition: .3s;
+                }
+                span{
+                    margin-left: 0px;
+                    transition: .3s;
+                }
+                &:hover{
+                    color: $color_link;
+                    top: 8px;
+                    &::after{
+                        width: 117px;
+                    }
+                    span{
+                        margin-left: 8px;
+                    }
+                }
+            }
+            
         }
         .back_btn{
             position: absolute;

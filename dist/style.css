@@ -563,6 +563,41 @@ footer p {
   font-size: 16px;
   font-weight: 300;
 }
+.page .show_con .description a {
+  position: relative;
+  display: inline-block;
+  color: #700aff;
+  text-decoration: none;
+  padding: 12px 0;
+  top: 12px;
+  transition: 0.3s;
+  z-index: 0;
+}
+.page .show_con .description a::after {
+  z-index: -1;
+  content: "";
+  width: 0px;
+  height: 8px;
+  position: absolute;
+  left: 0;
+  bottom: 16px;
+  background-color: #0affda;
+  transition: 0.3s;
+}
+.page .show_con .description a span {
+  margin-left: 0px;
+  transition: 0.3s;
+}
+.page .show_con .description a:hover {
+  color: #700aff;
+  top: 8px;
+}
+.page .show_con .description a:hover::after {
+  width: 117px;
+}
+.page .show_con .description a:hover span {
+  margin-left: 8px;
+}
 .page .show_con .back_btn {
   position: absolute;
   bottom: 100px;
