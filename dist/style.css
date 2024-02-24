@@ -616,6 +616,7 @@ footer p {
   background-color: #0affda;
   padding: 8px 0px;
   width: 330px;
+  border-radius: 100px;
 }
 .page .show_con .back_btn a span {
   font-size: 20px;
