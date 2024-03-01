@@ -96,6 +96,12 @@ a{
 .flex{
     display: flex;
 }
+.flex-wrap{
+    flex-wrap: wrap;
+}
+.gap-8{
+    gap: 8px 8px;
+}
 .PC_only{
     display: block;
 }
@@ -769,12 +775,12 @@ footer{
         position: relative;
         .show{
             order: 1;
-            width: 100vw;
+            width: 100%;
         }
         .show_con{
             order: 0;
             position: relative;
-            width: 100vw;
+            width: 100%;
             padding: 100px 160px;
             .back_btn{
                 position: fixed;
@@ -1014,12 +1020,12 @@ footer{
         position: relative;
         .show{
             order: 1;
-            width: 100vw;
+            width: 100%;
         }
         .show_con{
             order: 0;
             position: relative;
-            width: 100vw;
+            width: 100%;
             padding: 100px 36px;
             .back_btn{
                 position: fixed;

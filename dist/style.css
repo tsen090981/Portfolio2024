@@ -98,6 +98,14 @@ a {
   display: flex;
 }
 
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.gap-8 {
+  gap: 8px 8px;
+}
+
 .PC_only {
   display: block;
 }
@@ -734,12 +742,12 @@ footer p {
   }
   .page .show {
     order: 1;
-    width: 100vw;
+    width: 100%;
   }
   .page .show_con {
     order: 0;
     position: relative;
-    width: 100vw;
+    width: 100%;
     padding: 100px 160px;
   }
   .page .show_con .back_btn {
@@ -979,12 +987,12 @@ footer p {
   }
   .page .show {
     order: 1;
-    width: 100vw;
+    width: 100%;
   }
   .page .show_con {
     order: 0;
     position: relative;
-    width: 100vw;
+    width: 100%;
     padding: 100px 36px;
   }
   .page .show_con .back_btn {
