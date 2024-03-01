@@ -99,9 +99,6 @@ a{
 .flex-wrap{
     flex-wrap: wrap;
 }
-.gap-8{
-    gap: 8px 8px;
-}
 .PC_only{
     display: block;
 }
@@ -568,6 +565,12 @@ footer{
     .show{
         width: calc(100% - 450px);
     }
+    .workImg-half{
+        gap: 8px 8px;
+        img{
+            width: calc((100% - 8px) / 2);
+        }
+    }
     .show_con{
         font-family: 'Poppins', sans-serif;
         position: fixed;
@@ -599,7 +602,6 @@ footer{
         }
         .description{
             margin-top: 24px;
-            margin-bottom: 120px;
             h3{
                 font-size: 32px;
                 font-weight: 500;
@@ -608,6 +610,7 @@ footer{
             p{
                 font-size: 16px;
                 font-weight: 300;
+                padding-bottom: 80px;
             }
             a{
                 position: relative;
@@ -786,6 +789,7 @@ footer{
                 position: fixed;
                 right: 16px;
                 top: 16px;
+                z-index: 1000;
                 a{
                     font-size: 24px;
                     padding: 8px 8px;
@@ -801,8 +805,7 @@ footer{
                 }
             }
             .kv_scroll{
-                position: absolute;
-                bottom: 55px;
+                position: relative;
                 left: 50%;
                 transform: translateX(-50%);
                 display: flex;
@@ -1041,10 +1044,6 @@ footer{
                 }
             }
             .kv_scroll{
-                position: absolute;
-                bottom: 15px;
-                left: 50%;
-                transform: translateX(-50%);
                 display: flex;
                 align-items: flex-start;
                 width: 35px;

@@ -102,10 +102,6 @@ a {
   flex-wrap: wrap;
 }
 
-.gap-8 {
-  gap: 8px 8px;
-}
-
 .PC_only {
   display: block;
 }
@@ -549,6 +545,12 @@ footer p {
 .page .show {
   width: calc(100% - 450px);
 }
+.page .workImg-half {
+  gap: 8px 8px;
+}
+.page .workImg-half img {
+  width: calc((100% - 8px) / 2);
+}
 .page .show_con {
   font-family: "Poppins", sans-serif;
   position: fixed;
@@ -579,7 +581,6 @@ footer p {
 }
 .page .show_con .description {
   margin-top: 24px;
-  margin-bottom: 120px;
 }
 .page .show_con .description h3 {
   font-size: 32px;
@@ -589,6 +590,7 @@ footer p {
 .page .show_con .description p {
   font-size: 16px;
   font-weight: 300;
+  padding-bottom: 80px;
 }
 .page .show_con .description a {
   position: relative;
@@ -754,6 +756,7 @@ footer p {
     position: fixed;
     right: 16px;
     top: 16px;
+    z-index: 1000;
   }
   .page .show_con .back_btn a {
     font-size: 24px;
@@ -767,8 +770,7 @@ footer p {
     margin-right: 0px;
   }
   .page .show_con .kv_scroll {
-    position: absolute;
-    bottom: 55px;
+    position: relative;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -1009,10 +1011,6 @@ footer p {
     margin-right: 0;
   }
   .page .show_con .kv_scroll {
-    position: absolute;
-    bottom: 15px;
-    left: 50%;
-    transform: translateX(-50%);
     display: flex;
     align-items: flex-start;
     width: 35px;
