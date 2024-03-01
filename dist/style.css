@@ -81,6 +81,11 @@ html, body {
   background-color: #fff;
 }
 
+a {
+  text-decoration: none;
+  color: #1c1c1c;
+}
+
 .container {
   position: relative;
   margin: auto;
@@ -129,8 +134,8 @@ nav.navbar ul li a {
   bottom: -5px;
 }
 nav.navbar ul li a:hover {
-  color: #434343;
-  border-bottom: 3px solid #0affda;
+  color: #4f4f4f;
+  border-bottom: 3px solid #00ffd9;
   bottom: 0px;
 }
 
@@ -199,7 +204,7 @@ section.kv .deco_block {
   bottom: 0px;
   width: 16px;
   height: 96px;
-  background-color: #0affda;
+  background-color: #00ffd9;
 }
 section.kv .deco_line {
   position: absolute;
@@ -207,13 +212,13 @@ section.kv .deco_line {
   left: 8px;
   width: 1px;
   height: 76px;
-  background-color: #434343;
+  background-color: #4f4f4f;
 }
 
 section.about {
   position: relative;
   padding: 100px 0px 55px 0px;
-  background-color: #e3e3e3;
+  background-color: #ededed;
 }
 section.about::after {
   position: absolute;
@@ -250,7 +255,7 @@ section.about .content .title h2 {
   margin-right: 8px;
   font-family: "Poppins", sans-serif;
   font-weight: 600;
-  color: #0affda;
+  color: #00ffd9;
 }
 section.about .content .title .about_deco {
   width: 72px;
@@ -258,7 +263,7 @@ section.about .content .title .about_deco {
 section.about .content p.intro {
   font-family: "Poppins", sans-serif;
   font-size: 16px;
-  color: #434343;
+  color: #4f4f4f;
   margin-bottom: 16px;
 }
 section.about .content ul.detail {
@@ -279,7 +284,7 @@ section.about .content ul.detail li.all .title::after {
   bottom: 0;
   width: 80%;
   height: 4px;
-  background-color: #0affda;
+  background-color: #00ffd9;
 }
 section.about .content ul.detail li.all ul li {
   margin-bottom: 12px;
@@ -354,7 +359,7 @@ section.work .container .title .work_title {
 section.work .container .title .work_title h2 {
   font-family: "Poppins", sans-serif;
   font-weight: 600;
-  color: #0affda;
+  color: #00ffd9;
 }
 section.work .container .title .work_title .work_deco {
   width: 72px;
@@ -381,35 +386,49 @@ section.work .container ul li.work_item {
   max-width: calc((100% - 48px) / 3);
   flex-direction: column;
   align-items: center;
-  background-color: #e3e3e3;
-  border-radius: 15px;
+  background-color: #ededed;
+  border-radius: 0 12px 0 64px;
   transition: 0.5s;
 }
-section.work .container ul li.work_item:hover {
-  background-color: #0affda;
-}
-section.work .container ul li.work_item:hover .num {
-  color: #1c1c1c;
-  bottom: -12px;
-}
 section.work .container ul li.work_item:hover .work_pic {
+  position: relative;
   overflow: hidden;
 }
 section.work .container ul li.work_item:hover .work_pic img {
   transform: scale(1.1);
+}
+section.work .container ul li.work_item:hover .work_pic::after {
+  background: linear-gradient(to right, #00ffd9 60%, #700aff 100%);
+  width: 100%;
+}
+section.work .container ul li.work_item:hover .content .more_btn p {
+  color: #1c1c1c;
+}
+section.work .container ul li.work_item:hover .content .more_btn p span {
+  margin-left: 10px;
 }
 section.work .container ul li.work_item .work_pic {
   width: 88%;
   overflow: hidden;
   position: relative;
   top: -16px;
-  border-bottom: 10px solid white;
+  margin: auto;
 }
 section.work .container ul li.work_item .work_pic img {
   transition: 0.5s;
 }
+section.work .container ul li.work_item .work_pic::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 3px;
+  left: 0;
+  bottom: 0px;
+  background: linear-gradient(to right, #00ffd9 60%, #700aff 100%);
+  transition: 0.3s;
+}
 section.work .container ul li.work_item .content {
-  padding: 0px 10px 16px 10px;
+  padding: 0px 12px 20px 12px;
   text-align: center;
 }
 section.work .container ul li.work_item .content h5 {
@@ -417,13 +436,13 @@ section.work .container ul li.work_item .content h5 {
   font-family: "Poppins", sans-serif;
 }
 section.work .container ul li.work_item .content h3 {
-  margin-bottom: 8px;
+  margin-bottom: 4px;
   font-family: "Poppins", sans-serif;
 }
-section.work .container ul li.work_item .content .more_btn a {
+section.work .container ul li.work_item .content .more_btn p {
   font-family: "Poppins", sans-serif;
   display: inline-block;
-  color: #434343;
+  color: #4f4f4f;
   font-size: 14px;
   line-height: 16px;
   padding: 2px 8px;
@@ -432,25 +451,21 @@ section.work .container ul li.work_item .content .more_btn a {
   transition: 0.5s;
   font-weight: 300;
 }
-section.work .container ul li.work_item .content .more_btn a span {
+section.work .container ul li.work_item .content .more_btn p span {
   margin-left: 0px;
   transition: 0.5s;
 }
-section.work .container ul li.work_item .content .more_btn a:hover {
-  color: #1c1c1c;
-}
-section.work .container ul li.work_item .content .more_btn a:hover span {
-  margin-left: 10px;
-}
 section.work .container ul li.work_item .num {
   font-family: "Poppins", sans-serif;
-  font-size: 36px;
+  font-size: 60px;
   font-weight: 500;
+  letter-spacing: -2px;
   position: absolute;
-  left: 16px;
+  left: -8px;
   bottom: -26px;
-  color: #434343;
-  transition: 0.5s;
+  color: #b5b5b5;
+  transition: 0.3s;
+  text-align: center;
 }
 section.work .container ul li.work_item_half {
   max-width: calc((100% - 24px) / 2);
@@ -469,7 +484,7 @@ section.contact {
   overflow: hidden;
   position: relative;
   padding: 40px 0px 0px 0px;
-  background-color: #e3e3e3;
+  background-color: #ededed;
 }
 section.contact .hand {
   position: relative;
@@ -509,11 +524,11 @@ section.contact .hand:hover .deco {
 footer {
   position: relative;
   z-index: 1000;
-  background-color: #1c1c1c;
-  padding: 10px 0px;
+  background-color: #4f4f4f;
+  padding: 8px 0px;
 }
 footer p {
-  color: #7f7f7f;
+  color: #ededed;
   font-family: "Poppins", sans-serif;
   font-size: 12px;
   text-align: center;
@@ -585,7 +600,7 @@ footer p {
   position: absolute;
   left: 0;
   bottom: 16px;
-  background-color: #0affda;
+  background-color: #00ffd9;
   transition: 0.3s;
 }
 .page .show_con .description a span {
@@ -607,24 +622,32 @@ footer p {
   bottom: 100px;
 }
 .page .show_con .back_btn a {
-  justify-content: center;
+  justify-content: start;
   line-height: 1;
-  color: #1c1c1c;
+  color: #700aff;
   text-align: center;
   font-size: 20px;
   text-decoration: none;
-  background-color: #0affda;
-  padding: 8px 0px;
+  background-image: linear-gradient(to right, #00ffd9 20%, #700aff 0%);
+  background-size: 500% 100%;
+  padding: 8px 12px;
   width: 330px;
-  border-radius: 100px;
+  transition: 0.3s;
+  border-radius: 0;
 }
 .page .show_con .back_btn a span {
   font-size: 20px;
-  margin-right: 8px;
-  transition: 0.5s;
+  margin-right: 6px;
+  transition: 0.3s;
+}
+.page .show_con .back_btn a:hover {
+  background-image: linear-gradient(to right, #00ffd9 2%, #700aff 2%);
+  background-size: 100% 100%;
+  color: #00ffd9;
 }
 .page .show_con .back_btn a:hover span {
-  margin-right: 16px;
+  margin-right: 12px;
+  color: #00ffd9;
 }
 
 @media screen and (max-width: 1440px) {
@@ -811,8 +834,8 @@ footer p {
     bottom: -5px;
   }
   nav.navbar ul li a:hover {
-    color: #434343;
-    border-bottom: 3px solid #0affda;
+    color: #4f4f4f;
+    border-bottom: 3px solid #00ffd9;
     bottom: 0px;
   }
 
